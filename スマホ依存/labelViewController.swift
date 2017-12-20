@@ -9,11 +9,12 @@
 import UIKit
 
 class labelViewController: UIViewController {
-    var math:String? = ""
+   
     @IBOutlet weak var label: UILabel!
    
     override func viewDidLoad() {
-        label.text = ViewController.decision2()
+        UserDefaults.standard.object(forKey: "labelText")
+        self.label.text = label.text
         super.viewDidLoad()
       
 

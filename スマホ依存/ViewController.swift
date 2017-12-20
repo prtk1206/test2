@@ -14,8 +14,7 @@ class ViewController: UIViewController {
    
     @IBOutlet weak var label: UILabel!
 
-    var labelVCI = labelViewController()
-    
+  
     
     func random() -> String {
         let number1 = arc4random_uniform(10)
@@ -28,15 +27,17 @@ class ViewController: UIViewController {
         
     
     }
-    func record(){
-        labelVCI.math = self.label.text
-    }
+
     
+  
     //６桁の数字をlabelViewControllerに渡したい。
-    var figures = random()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = random()
+        UserDefaults.standard.set(label,forKey:"labelText")
+        
+        
        
         // Do any additional setup after loading the view, typically from a nib.
     }
