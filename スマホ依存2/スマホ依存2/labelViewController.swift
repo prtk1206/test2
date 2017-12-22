@@ -1,18 +1,21 @@
 //
-//  timerViewController.swift
-//  スマホ依存
+//  labelViewController.swift
+//  スマホ依存2
 //
-//  Created by 菊池隆之 on 2017/12/18.
+//  Created by 菊池隆之 on 2017/12/21.
 //  Copyright © 2017年 菊池隆之. All rights reserved.
 //
 
 import UIKit
 
-class timerViewController: UIViewController {
+class labelViewController: UIViewController {
 
-    @IBOutlet weak var countDownPicker: UIDatePicker!
+    @IBOutlet weak var label: UILabel!
+    var viewcon:AnyObject?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        label.text = viewcon!
 
         // Do any additional setup after loading the view.
     }
@@ -21,16 +24,8 @@ class timerViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-  
-    @IBAction func button(_ sender: UIButton) {
-        let storyboard: UIStoryboard = self.storyboard!
-        let nextView = storyboard.instantiateViewController(withIdentifier: "labelViewStoryBoard")
-        present(nextView,animated: true, completion: nil)
-       
-    }
     
-    //ボタンを押したときに画面が画面が遷移するようにしたい。わからね。
-}
+
     /*
     // MARK: - Navigation
 
@@ -41,4 +36,4 @@ class timerViewController: UIViewController {
     }
     */
 
-
+}
