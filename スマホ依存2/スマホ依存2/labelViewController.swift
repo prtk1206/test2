@@ -11,12 +11,11 @@ import UIKit
 class labelViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
-    var viewcon:AnyObject?
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = viewcon!
-
+        label.text = UserDefaults.standard.string(forKey: "str")
         // Do any additional setup after loading the view.
     }
 

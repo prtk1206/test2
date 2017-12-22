@@ -23,14 +23,16 @@ class ViewController: UIViewController {
         
         
     }
-    var labelVC = labelViewController()
-    let userDefaults = UserDefaults.standard
+    
+   
+    var str:String? = ""
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = random()
-        labelVC.viewcon = userDefaults.set(label, forKey: "text")
+        str = label.text
+        UserDefaults.standard.set(str,forKey:"str")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
