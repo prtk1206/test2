@@ -9,7 +9,7 @@
 import UIKit
 
 class labelViewController: UIViewController {
-    let storyboad: UIStoryboard? = self.storyboard!
+    let storyboad: UIStoryboard? = self.storyboard
     let nextView,animated storyboard.instantiateViewController(withIdentifier: "ViewControllerID")
     present(nextView,animated: true, completion: nil)
     
