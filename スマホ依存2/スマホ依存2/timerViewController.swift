@@ -14,12 +14,23 @@ class timerViewController: UIViewController {
     var timerInterval:TimeInterval = 0.0
     var countDownDate = Date(timeIntervalSinceReferenceDate:0.0)
 
+
     @IBOutlet weak var countDownPicker: UIDatePicker!
     @IBOutlet weak var label: UILabel!
-    
+    @IBAction func button(_ sender: UIButton) {
+        
+        timerInterval = countDownPicker.countDownDuration
+        countDownDate = Date(timeIntervalSinceReferenceDate:
+            timerInterval)
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation:"GMT")
+        label.text = dateFormatter.string(from:countDownDate)
+        
+        Timer.scheduledTimer(timeInterval:1.0,target:self,selector:#selector(timerViewController.countDown(_:)),userInfo:nil,repeats:true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.alpha = 0;
+     
 
         // Do any additional setup after loading the view.
     }
@@ -27,24 +38,6 @@ class timerViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    @IBAction func button(_ sender: UIButton) {
-        clear()
-        countDownDate = Date(timeIntervalSinceReferenceDate:timerInterval)
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeZone = TimeZone(abbreviation:"GMT")
-        label.text = dateFormatter.string(from:countDownDate)
-        
-        Timer.scheduledTimer(timeInterval:1.0,target:self,selector:#selector(timerViewController.countDown(_:)),userInfo:nil,repeats:true)
-        timerInterval = countDownPicker.countDownDuration
-       
-        
-    }
-    func nextStoryBoard(){
-        let storyboard: UIStoryboard = self.storyboard!
-        let nextView = storyboard.instantiateViewController(withIdentifier: "labelViewStoryBoard")
-        present(nextView,animated: true, completion: nil)
-        
     }
     @objc func countDown(_ timer:Timer){
         countDownDate -= 1.0
@@ -55,15 +48,17 @@ class timerViewController: UIViewController {
         
         if countDownDate.timeIntervalSinceReferenceDate <= 0.0 {
             timer.invalidate()
-            nextStoryBoard()
+            performSegue(withIdentifier: "segueToLabel", sender: self)
+            //遷移の段階で何らかの問題が起きている。
         }}
-    func clear(){
-        label.alpha = 1;
-        countDownPicker.alpha = 0;
-    }
+    
+        
+       
         
     
-}
+    }
+    
+
 
     
 

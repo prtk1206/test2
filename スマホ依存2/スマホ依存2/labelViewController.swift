@@ -9,13 +9,24 @@
 import UIKit
 
 class labelViewController: UIViewController {
-
+    let storyboad: UIStoryboard? = self.storyboard!
+    let nextView,animated storyboard.instantiateViewController(withIdentifier: "ViewControllerID")
+    present(nextView,animated: true, completion: nil)
+    
+    
+    
+    
     @IBOutlet weak var label: UILabel!
+    
+    
+    
  
     
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = UserDefaults.standard.string(forKey: "str")
+        navigationItem.setHidesBackButton(false, animated: false)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -24,7 +35,17 @@ class labelViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func top(_ sender: UIBarButtonItem) {
+        
+        performSegue(withIdentifier: "segueLabeltoTop", sender: self)
+    }
+    @IBAction func Top(_ sender: UIButton) {
+        
+    }
+    
+        
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -35,4 +56,4 @@ class labelViewController: UIViewController {
     }
     */
 
-}
+

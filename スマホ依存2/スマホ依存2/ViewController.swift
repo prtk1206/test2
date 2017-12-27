@@ -24,7 +24,8 @@ class ViewController: UIViewController {
         
     }
     
-   
+    
+    
     var str:String? = ""
 
 
@@ -40,7 +41,11 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    @IBAction func reset(_ sender: Any) {
+        label.text = random()
+        str = label.text
+        UserDefaults.standard.set(str,forKey:"str")
+    }
 
 }
 
