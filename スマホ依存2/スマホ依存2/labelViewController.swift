@@ -9,15 +9,9 @@
 import UIKit
 
 class labelViewController: UIViewController {
-    let storyboad: UIStoryboard? = self.storyboard
-    let nextView,animated storyboard.instantiateViewController(withIdentifier: "ViewControllerID")
-    present(nextView,animated: true, completion: nil)
-    
-    
-    
-    
+
     @IBOutlet weak var label: UILabel!
-    
+    var vc: String?
     
     
  
@@ -34,17 +28,13 @@ class labelViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func top(_ sender: UIBarButtonItem) {
-        
-        performSegue(withIdentifier: "segueLabeltoTop", sender: self)
-    }
-    @IBAction func Top(_ sender: UIButton) {
-        
-    }
+
+    var :vc? = ViewController()
+    vc.viewcon = "text"
+
     
         
-    }
+
     
     /*
     // MARK: - Navigation

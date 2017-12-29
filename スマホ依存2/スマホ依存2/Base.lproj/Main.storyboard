@@ -113,19 +113,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qht-HT-asH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="L1x-Ll-LaM">
-                                        <barButtonItem key="leftBarButtonItem" title="Top" id="Kac-hl-JpM">
-                                            <connections>
-                                                <action selector="top:" destination="3zM-me-Q5a" id="vGF-d8-56z"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqg-Zs-Hjb">
                                 <rect key="frame" x="246" y="495" width="101" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -134,6 +121,7 @@
                                 <connections>
                                     <action selector="Top:" destination="3zM-me-Q5a" eventType="touchUpInside" id="jEx-JW-Ros"/>
                                     <action selector="top:" destination="3zM-me-Q5a" eventType="touchUpInside" id="cpE-Io-6eB"/>
+                                    <action selector="topButton:" destination="3zM-me-Q5a" eventType="touchUpInside" id="mVl-Yc-b2g"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -146,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cr5-8Y-cdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1320.8" y="116.49175412293854"/>
+            <point key="canvasLocation" x="1367" y="117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r6J-Qa-bl6">
