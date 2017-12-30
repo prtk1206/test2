@@ -10,6 +10,9 @@ import UIKit
 
 class timerViewController: UIViewController {
     
+    @IBAction func back(_ sender: Any) {
+        performSegue(withIdentifier: "back", sender: self)
+    }
     var timer:Timer?
     var timerInterval:TimeInterval = 0.0
     var countDownDate = Date(timeIntervalSinceReferenceDate:0.0)
@@ -18,6 +21,7 @@ class timerViewController: UIViewController {
     @IBOutlet weak var countDownPicker: UIDatePicker!
     @IBOutlet weak var label: UILabel!
     @IBAction func button(_ sender: UIButton) {
+        countDownPicker.alpha = 0
         label.alpha = 1
         timerInterval = countDownPicker.countDownDuration
         countDownDate = Date(timeIntervalSinceReferenceDate:
