@@ -11,16 +11,11 @@ import UIKit
 class labelViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
-    var vc: String?
-    
-    
  
     
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = UserDefaults.standard.string(forKey: "str")
-        navigationItem.setHidesBackButton(false, animated: false)
-        
         // Do any additional setup after loading the view.
     }
 
@@ -28,14 +23,11 @@ class labelViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    var :vc? = ViewController()
-    vc.viewcon = "text"
-
+    @IBAction func returnTop(_ sender: Any) {
+       performSegue(withIdentifier: "Unwind", sender: self)
+    }
     
-        
 
-    
     /*
     // MARK: - Navigation
 
@@ -46,4 +38,4 @@ class labelViewController: UIViewController {
     }
     */
 
-
+}

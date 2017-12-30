@@ -18,7 +18,7 @@ class timerViewController: UIViewController {
     @IBOutlet weak var countDownPicker: UIDatePicker!
     @IBOutlet weak var label: UILabel!
     @IBAction func button(_ sender: UIButton) {
-        
+        label.alpha = 1
         timerInterval = countDownPicker.countDownDuration
         countDownDate = Date(timeIntervalSinceReferenceDate:
             timerInterval)
@@ -29,8 +29,9 @@ class timerViewController: UIViewController {
         Timer.scheduledTimer(timeInterval:1.0,target:self,selector:#selector(timerViewController.countDown(_:)),userInfo:nil,repeats:true)
     }
     override func viewDidLoad() {
+        label.alpha = 0
         super.viewDidLoad()
-     
+     //スタートしたらピッカーを消して残り時間を表示したい。//
 
         // Do any additional setup after loading the view.
     }

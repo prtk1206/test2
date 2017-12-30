@@ -46,6 +46,9 @@ class ViewController: UIViewController {
         str = label.text
         UserDefaults.standard.set(str,forKey:"str")
     }
+    @IBAction func unwindAction(_ segue: UIStoryboardSegue){
+    }
+    }
 
-}
+
 

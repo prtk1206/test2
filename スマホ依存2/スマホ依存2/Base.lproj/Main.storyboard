@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oo9-KB-H2x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -52,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-116" y="116"/>
+            <point key="canvasLocation" x="-38" y="116"/>
         </scene>
         <!--Timer View Controller-->
         <scene sceneID="ETU-14-JUQ">
@@ -120,6 +120,7 @@
                                 <state key="normal" title="Top"/>
                                 <connections>
                                     <action selector="Top:" destination="3zM-me-Q5a" eventType="touchUpInside" id="jEx-JW-Ros"/>
+                                    <action selector="returnTop:" destination="3zM-me-Q5a" eventType="touchUpInside" id="B8U-gY-Q4A"/>
                                     <action selector="top:" destination="3zM-me-Q5a" eventType="touchUpInside" id="cpE-Io-6eB"/>
                                     <action selector="topButton:" destination="3zM-me-Q5a" eventType="touchUpInside" id="mVl-Yc-b2g"/>
                                 </connections>
@@ -130,29 +131,13 @@
                     </view>
                     <connections>
                         <outlet property="label" destination="wDA-Rs-2Nc" id="T3P-Wb-lAe"/>
+                        <segue destination="3eB-Jc-L5x" kind="unwind" identifier="Unwind" unwindAction="unwindAction:" id="9x2-sC-XuW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cr5-8Y-cdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3eB-Jc-L5x" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1367" y="117"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="r6J-Qa-bl6">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Oo9-KB-H2x" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="94C-ZT-zAJ">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jZC-my-cVR"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FOS-t3-XLG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-751" y="118"/>
         </scene>
     </scenes>
 </document>
