@@ -24,7 +24,10 @@ class labelViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func returnTop(_ sender: Any) {
-       performSegue(withIdentifier: "Unwind", sender: self)
+        let storyboard: UIStoryboard = self.storyboard!
+        let nextView = storyboard.instantiateViewController(withIdentifier: "ViewControllerID");
+        present(nextView,animated: true, completion: nil)
+       
     }
     
 

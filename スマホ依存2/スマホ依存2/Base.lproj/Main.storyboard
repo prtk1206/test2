@@ -119,10 +119,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="Top"/>
                                 <connections>
-                                    <action selector="Top:" destination="3zM-me-Q5a" eventType="touchUpInside" id="jEx-JW-Ros"/>
                                     <action selector="returnTop:" destination="3zM-me-Q5a" eventType="touchUpInside" id="B8U-gY-Q4A"/>
-                                    <action selector="top:" destination="3zM-me-Q5a" eventType="touchUpInside" id="cpE-Io-6eB"/>
-                                    <action selector="topButton:" destination="3zM-me-Q5a" eventType="touchUpInside" id="mVl-Yc-b2g"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -131,11 +128,9 @@
                     </view>
                     <connections>
                         <outlet property="label" destination="wDA-Rs-2Nc" id="T3P-Wb-lAe"/>
-                        <segue destination="3eB-Jc-L5x" kind="unwind" identifier="Unwind" unwindAction="unwindAction:" id="9x2-sC-XuW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cr5-8Y-cdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="3eB-Jc-L5x" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1367" y="117"/>
         </scene>
