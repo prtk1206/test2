@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     
-    func random() -> String {
+   func random() -> String {
         let number1 = arc4random_uniform(10)
         let number2 = arc4random_uniform(10)
         let number3 = arc4random_uniform(10)
@@ -23,6 +23,17 @@ class ViewController: UIViewController {
         
         
     }
+    
+    
+       
+    @IBAction func setting(_ sender: Any) {if let url = URL(string:"app-prefs:root=General&path={taka-zenkoku-no1-yahoo.co.jp.-----2}"){
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+    else{
+        label.text = "あいうえお"
+        }
+    }
+    
     
     
     

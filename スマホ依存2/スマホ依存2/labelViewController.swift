@@ -9,6 +9,7 @@
 import UIKit
 
 class labelViewController: UIViewController {
+    
 
     @IBOutlet weak var label: UILabel!
  
@@ -17,6 +18,7 @@ class labelViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(true,animated:false)
         label.text = UserDefaults.standard.string(forKey: "str")
         // Do any additional setup after loading the view.
     }

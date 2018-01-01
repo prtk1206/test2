@@ -21,6 +21,7 @@ class timerViewController: UIViewController {
     @IBOutlet weak var countDownPicker: UIDatePicker!
     @IBOutlet weak var label: UILabel!
     @IBAction func button(_ sender: UIButton) {
+        
         countDownPicker.alpha = 0
         label.alpha = 1
         timerInterval = countDownPicker.countDownDuration
