@@ -49,6 +49,14 @@
                                     <action selector="setting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NIP-9i-91V"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l85-v8-ijM">
+                                <rect key="frame" x="264" y="416" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="判定"/>
+                                <connections>
+                                    <action selector="hantei:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yjZ-Ct-Uic"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
