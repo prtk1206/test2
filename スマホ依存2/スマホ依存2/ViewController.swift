@@ -26,16 +26,14 @@ class ViewController: UIViewController {
     
     
        
-    @IBAction func setting(_ sender: Any) {if let url = URL(string:UIApplicationOpenSettingsURLString){
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-    }
-    else{
-        label.text = "あいうえお"
-        }
-    }
     
-    @IBAction func hantei(_ sender: Any) {
-        guard let url = URL(string:"App-prefs:root=Bluetooth&path={taka-zenkoku-no1-yahoo.co.jp}") else {
+    
+   
+    
+    @IBAction func setting(_ sender: Any) {
+    
+    
+        guard let url = URL(string:"App-Prefs:root=General&path=ACCESSIBILITY") else {
             return label.text = "残念"
             
         }

@@ -13,8 +13,7 @@ class labelViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
  
-    @IBAction func back(_ sender: Any) {
-    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
